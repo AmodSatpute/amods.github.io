@@ -1,0 +1,50 @@
+.container .row h1 {
+    font-size: 4rem;
+    font-family: "Times New Roman";
+    text-decoration: underline;
+    padding-bottom: 5px;
+    color:#6C3483;
+    display: inline-block;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin: 0;
+    
+}
+
+.card {
+    word-wrap: break-word;
+    overflow: hidden;
+    margin: 20px 10px;
+ 
+    min-height: 400px !important;
+    flex-direction: column;
+    box-shadow: 5px 10px 50px -8px rgba(0,0,0,.5);
+}
+
+
+.card-body {
+    align-items: center;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    font-family: "Times New Roman";
+    font-size: 3 rem;
+}
+
+.card-title {
+    font-family: "Times New Roman";
+    font-size: 10 rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: inherit;
+}
+
+.card-body h6, .card-body p {
+    width: 100%;
+    margin: 10px 0 !important;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-family: "Times New Roman";
+   }

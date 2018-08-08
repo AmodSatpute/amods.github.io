@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row text-center" *ngIf="currentHouse">
+    <a routerLink="/home" class="btn btn-outline-dark" role="button" aria-pressed="true">Go Back</a>
+    <div class="col-md-12" *ngFor="let houseInfo of currentHouse">
+      <h2>{{ houseInfo.name }}</h2>
+      <br>
+      <br>
+
+      <p>REGION : {{ houseInfo.region }}</p>
+      <p>COAT OF ARMS : {{ houseInfo.coatOfArms }}</p>
+      <p>WORDS : {{ houseInfo.words }}</p>
+      <p *ngIf="houseInfo.titles.length>0">TITLES : {{ houseInfo.titles }}<span *ngFor="let titles of houseInfo.titles; let first=first; let last=last">{{ titles }}{{ last ? '' : ', ' }}</span></p>
+      <p *ngIf="houseInfo.seats.length>0">SEATS : {{ houseInfo.seats }}<span *ngFor="let seats of houseInfo.seats; let first=first; let last=last">{{ seats }}{{ last ? '' : ', ' }}</span></p>
+      <p>CURRENT LORD : {{ houseInfo.currentLord }}</p>
+      <p>HEIR : {{ houseInfo.heir }}</p>
+      <p>OVERLORD : {{ houseInfo.overlord }}</p>
+      <p>FOUNDED : {{ houseInfo.founded }}</p>
+      <p>FOUNDER : {{ houseInfo.founder }}</p>
+      <p>DIED OUT : {{houseInfo.diedOut }}</p>
+      <p *ngIf="houseInfo.ancestralWeapons.length>0">ANCESTRAL WEAPONS : {{ houseInfo.ancestralWeapons }}<span *ngFor="let ancestralWeapons of houseInfo.ancestralWeapons; let first=first; let last=last">{{ ancestralWeapons }}{{ last ? '' : ', ' }}</span></p>
+      <p *ngIf="houseInfo.cadetBranches.length>0">CADET BRACNCHES : {{ houseInfo.cadetBranches }}<span *ngFor="let cadetBranches of houseInfo.cadetBranches; let first=first; let last=last">{{ cadetBranches }}{{ last ? '' : ', ' }}</span></p>
+      <p *ngIf="houseInfo.swornMembers.length>0">SWORN MEMBERS : {{ houseInfo.swornMembers }}<span *ngFor="let swornMembers of houseInfo.swornMembers; let first=first; let last=last">{{ swornMembers }}{{ last ? '' : ', ' }}</span></p>
+    </div>
+
+  </div>
+</div>

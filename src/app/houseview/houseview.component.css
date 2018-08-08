@@ -1,0 +1,14 @@
+h2 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Times New Roman";
+    color: #da2020;
+    letter-spacing: 3px;
+    font-weight: 700;
+ 
+}
+
+p {
+    font-size: 2rem;
+    font-style: italic; 
+}

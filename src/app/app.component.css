@@ -1,0 +1,32 @@
+/*body{
+    margin:0;
+    background-color:#111e27;
+    
+}
+.container
+{   
+    background-image:url('assets/Image/images.jpg');
+    height:200px;
+    padding:0;
+    margin:0;
+ }
+ /* Note: Try to remove the following lines to see the effect of CSS positioning 
+ .affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.affix + .container {
+    padding-top: 70px;
+}
+*/
+
+/* You can add global styles to this file, and also import other style files*/
+.header{
+    background-color: #04192E;
+    display: block;
+    padding: 3%;
+    color: white;
+    font-size: 26px;
+}

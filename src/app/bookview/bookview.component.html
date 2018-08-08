@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row text-center" *ngIf="currentBook">
+    <a routerLink="/home" class="btn btn-outline-dark" role="button" aria-pressed="true">Go Back</a>
+    <div class="col-md-12" *ngFor="let bookDetails of currentBook">
+      <h2>{{ bookDetails.name }}</h2>
+      <br>
+      <br>
+
+      <p *ngIf="bookDetails.authors.length>1">
+        AUTHOR(S) : {{ bookDetails.authors }}
+        <span *ngFor="let author of bookDetails.authors;let first=first;let last=last">{{ author }}{{ last ? '' : ', ' }}</span>
+      </p>
+
+      <p>ISBN : {{ bookDetails.isbn }}</p>
+
+      <p>RELEASED : {{ bookDetails.released }}</p>
+
+      <p>PUBLISHER : {{ bookDetails.publisher }}</p>
+
+      <p>PAGES : {{ bookDetails.numberOfPages }}</p>
+
+      <p>COUNTRY : {{ bookDetails.country }}</p>
+
+      <p>FORMAT : {{ bookDetails.mediaType }}</p>
+
+      <p *ngIf="bookDetails.characters.length>1">
+        CHARACTERS URL :
+        <span *ngFor="let character of bookDetails.characters;let first=first;let last=last">{{ character }}{{ last ? '' : ', ' }}</span>
+      </p>
+
+      <p *ngIf="bookDetails.povCharacters.length>1">
+        POV CHARACTERS URL :
+        <span *ngFor="let povCharacter of bookDetails.povCharacters;let first=first;let last=last">{{ povCharacter }}{{ last ? '' : ', ' }}</span>
+      </p>
+
+    </div>
+    
+
+  </div>
+</div>

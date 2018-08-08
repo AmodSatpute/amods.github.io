@@ -1,0 +1,14 @@
+h2 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Times New Roman";
+    font-style: italic;
+    color: #3498db;
+    letter-spacing: 3px;
+    font-weight: 700;
+    }
+
+p {
+    font-size: 1rem;
+    font-family: "Times New Roman";
+}

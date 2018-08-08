@@ -1,0 +1,95 @@
+<div class="container" style="text-align: center">
+  <div class="row" style="text-align: center">
+    <h1 class="text-center col-md-12 p-5" style="font-size: 22px">List of All Books</h1>
+  </div>
+
+  <br>
+  <br>
+  <div class="row" style="text-align: center" *ngIf="allBooks.length>0">
+    <!-- iterative div starts here -->
+    <div *ngFor="let book of allBooks" class="col-md-4">
+      <div class="card text-white bg-dark mb-3" style="max-width: 29rem;">
+        <img class="card-img-top"  src="../assets/Image/download (1).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h6 class="card-title">{{book.name | uppercase}}</h6>
+          <p class="card-text"> This contains book title {{book.name}}
+            <br/> with ISBN {{book.isbn}} .
+            <br> The number of pages included in this book are {{book.numberOfPages}}.
+            <br> And this book is published by {{book.publisher}} publisher.
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+         
+          <a [routerLink]="['/book', book.name]" class="btn btn-warning">Book Details</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- end iterative div -->
+</div>
+<br/>
+<br/>
+<br/>
+<div class="container" style="text-align: center">
+  <div class="row" style="text-align: center">
+    <h1 class="text-center col-md-12 p-5" style="font-size: 22px">List of All Houses</h1>
+  </div>
+  <br>
+  <br>
+  <div class="row" style="text-align: center" *ngIf="allHouses.length>0">
+    <!-- iterative div starts here -->
+    <div *ngFor="let house of allHouses" class="col-md-4">
+      <div class="card text-white bg-primary mb-3" style="max-width: 29rem;">
+        <img class="card-img-top img-fluid" src="../assets/Image/download.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h6 class="card-title">{{house.name | uppercase}}</h6>
+           <p class="card-text"> This contains book title {{house.name}}
+            <br/> with region {{house.region}} .
+            <br> The number coatOfArms in this book are {{house.coatOfArms}}.
+            <br>
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+            <a [routerLink]="['/house', house.name]" class="btn btn-danger">House Details</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- end iterative div -->
+</div>
+<br/>
+<br/>
+<br/>
+
+
+<div class="container" style="text-align: center">
+  <div class="row" style="text-align: center">
+    <h1 class="text-center col-md-12 p-5" style="font-size: 22px">List of All Characters</h1>
+  </div>
+ 
+  <br>
+  <br>
+  <div class="row" style="text-align: center" *ngIf="allCharacters.length>0">
+    <!-- iterative div starts here -->
+    <div *ngFor="let character of allCharacters" class="col-md-4">
+      <div class="card text-white bg-success mb-3" style="max-width: 29rem;">
+        <img class="card-img-top img-fluid" src="../assets/Image/images (1).jpg" alt="Card image cap">
+        <div class="card-body">
+          <h6 class="card-title">{{character.gender | uppercase}}</h6>
+      
+            <p class="card-text"> This character is contained in following books. {{character.books}}
+            <br>
+         
+        </div>
+        <div class="card-footer text-muted">
+          
+          <a [routerLink]="['/character', character.gender]" class="btn btn-primary">Character Details</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- end iterative div -->
+</div>
